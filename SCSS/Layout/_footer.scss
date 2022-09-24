@@ -1,0 +1,146 @@
+footer {
+	background: url("../../images/footer_background.jpg");
+	@include background(bottom, cover, no-repeat);
+	padding:50px 0 200px 0;
+	color: $color-white;
+	.container{
+		margin-top: 100px;
+		h5 {
+			@include text($color-white, 24px, $fw-6);
+			margin-bottom: 30px;
+		}
+	}
+	& .footer-contact {
+		.txt-info {
+			@include text($color-white, $fs-2, $fw-4)
+			}
+		& .icon-ct {
+			 i {		
+				font-size: $fs-2;
+				margin-right: 5px;
+			}
+		}
+	
+	}
+
+	& .network {
+		margin-top: 20px;
+		& i {
+			margin-right: 12px;
+			font-size: $fs-2;
+			transition: all 0.1s linear;
+			cursor: pointer;
+			&:hover {
+				color: $color-black;
+			}
+		}
+	}
+	// Quick links
+	& ul li {
+		width: 25%;
+		list-style: none;
+		border-bottom: 1px solid rgb(97, 80, 80);
+		padding-bottom: 5px;
+		a {
+			@include text($color-white, $fs-2, $fw-4);			
+			text-decoration: none;
+			transition: all 0.5s;
+			&:hover {
+				opacity: 0.7;
+				text-decoration: none;
+				color: $color-white;
+			}
+		}
+	}
+
+	// Newsletter
+	.newsletter {
+		width: 90%;
+		margin-top: 40px;
+		& .txt-email input::placeholder {
+			color: $color-white;
+		}
+		& .txt-email input {
+			@include text($color-white,$fs-3,$fw-4);
+			text-align: center;
+			background: transparent;
+			border-radius: 50px;
+			height: 50px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			&:focus {
+				border-color: rgba(255, 255, 255, 1);
+				box-shadow: none;
+			}
+		}
+
+		& .subscribe {
+			& .btn {
+				@include text($color-black, $fs-1, $fw-6);
+				width: 100%;
+				height: 50px;
+				margin: 10px 0;
+				border-radius: 50px;
+				background-color: $color-rose;
+				box-shadow: 0 0 0 3em $color-white inset;
+				&:hover {
+					color: $color-white;
+					border: 0.5 $color-white;
+					box-shadow: 0 0 0 0.1em $color-white inset;
+				}
+			}
+		}
+	}
+
+}
+
+// Responsive
+// ...991.98px 
+@include responsive("large-down") {
+	footer {
+		padding-top: 50px;
+		.col-md-6{
+			padding-bottom: 80px;
+			font-size: 12px;
+		}
+	}
+
+}
+
+// ...767.98px
+@include responsive("medium-down") {
+	footer {
+		padding-top: 50px;
+		.col-md-6{
+			padding: 0 0 50px 50px;
+			font-size: 12px;
+			& ul li {
+				width: 50%;}
+		}
+		.newsletter{
+			text-align: center;
+			.txt-email input {
+			background-color: $color-rose !important;
+			}
+		}
+	}
+}
+
+// ..575.98px..
+@include responsive("small-down") {
+	footer {
+		padding-top: 30px;
+		.col-12{
+		padding-top: 20px;
+		font-size: 8px;
+		& ul li {
+			width: 25%;
+			}
+		& .newsletter{
+			text-align: center;
+			.txt-email input {
+			background-color: $color-rose !important;
+				}
+			}
+		}
+		
+}}

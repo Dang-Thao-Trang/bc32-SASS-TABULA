@@ -1,0 +1,31 @@
+// color
+$color-black: #000000;
+$color-gray: #abb8c3;
+$color-white: #fff;
+$color-rose: #b61984;
+
+// size
+$fs-1: 14px;
+$fs-2: 16px;
+$fs-3: 18px;
+$fs-4: 20px;
+$fs-5: 36px;
+$fs-6: 42px;
+$fs-7: 70px;
+$fs-8: 100px;
+$fw-4: 400;
+$fw-5: 500;
+$fw-6: 600;
+$fw-7: 700;
+
+// break points
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px,
+    "extra-large-down": 1199.98px,
+    "large-down": 991.98px,
+    "medium-down": 767.98px,
+    "small-down": 575.98px,
+);

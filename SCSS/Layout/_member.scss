@@ -1,0 +1,28 @@
+.members{
+    background-color: #dcd1f0;
+    background-image:url(../../images/Wave_White_bottom_right_shape_01.png);
+    @include background(bottom, center, no-repeat)
+}
+
+@include responsive("medium-down") {
+    .members{  
+        .col-sm-6{ 
+            padding: 5px 20px;
+            .card-body{
+                padding: 10px 15px;
+                font-size: $fs-1;  
+            }
+        }
+    }
+}
+
+@include responsive("small-down") {
+    .members{   
+        .col-12{ 
+            padding: 5px 50px;
+        .card-body{
+            font-size: 10px;  
+        }
+        }
+    }
+}

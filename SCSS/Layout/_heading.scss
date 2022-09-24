@@ -1,0 +1,76 @@
+header {
+    @include position(fixed, 0, 0);
+    background-color: transparent;
+    z-index: 100;
+    width: 100%;
+	padding: 5px;
+    .navbar {
+        a {
+            color: $color-black  !important;
+        }
+        .navbar-brand {
+            display: hiden;
+            img {
+                width: 90px;
+            }
+        }
+        .myNavbar {
+            font-size: $fs-1;
+            font-weight: $fw-6;
+            .nav-item a {
+                padding-right: 50px;
+            }
+        }
+    }
+    .navContact{
+        a{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            margin-left: 16px;
+
+        }
+    }
+
+    &.sticky{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: $color-white;
+        transition: 0.5;
+        .navbar{
+            padding: 0;
+            .navbar-brand{
+            display: none;
+             }
+        }
+    }
+}
+
+@include responsive("extra-large-down") {
+	header{
+		position: fixed;
+		background-color: #fff;
+		padding: 0;
+		.navbar{
+			padding: 0;
+			.image-fluid{
+				width: 60px !important;
+			}
+			&#btnToggle span{
+				color: $color-rose;
+			}
+		.sticky{
+			a .navbar-brand {
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 10%;
+			display: hiden;
+			img{
+			width: 50px;
+				}
+			}
+			}
+		}
+}
+}
+

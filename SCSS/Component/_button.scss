@@ -1,0 +1,19 @@
+.btnRose {
+font-weight: $fw-5;
+color: $color-white;
+box-shadow: rgb(182, 25, 132) 0px 0px 0px 3em inset;
+display: inline-block;
+padding: 5px 20px;
+border-radius: 50px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(182, 25, 132);
+border-image: initial;
+overflow: hidden;
+transition: all 0.3s ease 0s;
+span , i{
+    color: $color-white;
+    font-size: $fs-2;
+}
+
+}
